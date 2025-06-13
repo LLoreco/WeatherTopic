@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('loginPassword').value;
 
         try {
-            const response = await fetch('/api/auth/login', {
+            const response = await fetch('http://localhost:3000/backend/public/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -62,30 +62,30 @@ document.addEventListener('DOMContentLoaded', () => {
     registerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        const name = document.getElementById('registerName').value;
+        const username = document.getElementById('registerName').value;
         const email = document.getElementById('registerEmail').value;
         const password = document.getElementById('registerPassword').value;
 
         try {
-            const response = await fetch('/api/auth/register', {
+            const response = await fetch('http://localhost:3000/backend/public/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ name, email, password })
+                body: JSON.stringify({ username, email, password })
             });
 
             const data = await response.json();
 
             if (response.ok) {
                 alert('Registration successful! Please login.');
-                // Switch to login tab
                 document.querySelector('[data-tab="login"]').click();
             } else {
                 alert(data.message || 'Registration failed');
             }
         } catch (error) {
             alert('An error occurred. Please try again.');
+            console.error('Register error:', error);
         }
     });
-}); 
+});

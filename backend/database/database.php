@@ -8,6 +8,7 @@ class Database{
     private $password = 'Abcdefg111';
     private $connection;
     private $logger;
+    
     public function __construct() {
         $this->logger = new Logger();
     }

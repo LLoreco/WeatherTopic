@@ -1,6 +1,6 @@
 <?php
 class Logger{
-    private $logFileUser = __DIR__ . 'user_errors.log';
+    private $logFileUser = __DIR__ . '/../logs/user_errors.log';
 
     public function logErrorUser($message) {
         $timestamp = date('Y-m-d H:i:s');
