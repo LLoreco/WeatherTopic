@@ -1,0 +1,11 @@
+<?php
+class Logger{
+    private $logFileUser = __DIR__ . 'user_errors.log';
+
+    public function logErrorUser($message) {
+        $timestamp = date('Y-m-d H:i:s');
+        $logMessage = "[$timestamp] $message" . PHP_EOL;
+        error_log($logMessage, 3, $this->logFileUser);
+    }
+}
+?>
