@@ -40,7 +40,7 @@ $result = $user->register('', '', '');
 print_r($result);
 echo "\n";
 
-// Тест 7: Неверный формат email
+// Тест 7: Неверный формат email 
 echo "Тест 7: Неверный email\n";
 $result = $user->register('user2', 'notanemail', 'pass123');
 print_r($result);
