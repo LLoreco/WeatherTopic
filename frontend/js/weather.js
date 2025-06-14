@@ -1,19 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if user is logged in
     const token = localStorage.getItem('token');
     if (!token) {
         window.location.href = 'index.html';
         return;
     }
+    console.log('Token:', token);
 
-    // Logout handling
     const logoutBtn = document.getElementById('logoutBtn');
     logoutBtn.addEventListener('click', () => {
         localStorage.removeItem('token');
         window.location.href = 'index.html';
     });
 
-    // Weather form handling
     const weatherForm = document.getElementById('weatherForm');
     const weatherInfo = document.getElementById('weatherInfo');
     const errorMessage = document.getElementById('errorMessage');
@@ -26,22 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
         weatherInfo.classList.add('hidden');
 
         try {
-            const response = await fetch(`/api/weather?city=${encodeURIComponent(city)}`, {
+            const response = await fetch(`http://localhost:3000/backend/public/weather.php?city=${encodeURIComponent(city)}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
             });
 
-            const data = await response.json();
+            const text = await response.text();
+            console.log('Raw response:', text);
+            const data = JSON.parse(text);
 
             if (response.ok) {
-                // Update weather information
-                document.getElementById('cityName').textContent = data.city;
-                document.getElementById('temperature').textContent = data.temperature;
-                document.getElementById('description').textContent = data.description;
-                document.getElementById('weatherIcon').src = data.icon;
-                document.getElementById('humidity').textContent = `${data.humidity}%`;
-                document.getElementById('windSpeed').textContent = `${data.windSpeed} m/s`;
+                document.getElementById('cityName').textContent = data.data.city;
+                document.getElementById('temperature').textContent = data.data.temperature;
+                document.getElementById('description').textContent = data.data.description;
+                document.getElementById('weatherIcon').src = `http:${data.data.icon}`;
+                document.getElementById('humidity').textContent = `${data.data.humidity}%`;
+                document.getElementById('windSpeed').textContent = `${data.data.windSpeed} m/s`;
 
                 weatherInfo.classList.remove('hidden');
             } else {
@@ -51,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             errorMessage.textContent = 'An error occurred. Please try again.';
             errorMessage.classList.remove('hidden');
+            console.error('Weather fetch error:', error, error.stack);
         }
     });
-}); 
+});

@@ -46,7 +46,14 @@
                 $this->logger->logErrorUser("Empty fields in login");
                 return ['success' => false, 'message' => 'You have empty fields'];
             }
-            return $this->fetchUser($email, $password);
+
+            $result = $this->fetchUser($email, $password);
+            if ($result['success']) {
+                $token = bin2hex(random_bytes(16));
+                $this->updateToken($email, $token);
+                $result['token'] = $token;
+        }
+        return $result;
         }
         private function checkEmail($email){
             try{
@@ -115,6 +122,17 @@
                 return ['success' => false, 'message' => 'Password is too short'];
             }
             return null;
+        }
+        private function updateToken($email, $token) {
+            try {
+                $query = "UPDATE users SET token = :token WHERE email = :email";
+                $stmt = $this->db->prepare($query);
+                $stmt->bindParam(':token', $token);
+                $stmt->bindParam(':email', $email);
+                $stmt->execute();
+            } catch (PDOException $e) {
+                $this->logger->logErrorUser("Database error in updateToken: " . $e->getMessage());
+            }
         }
     }
 ?>

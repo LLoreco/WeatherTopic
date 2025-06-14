@@ -1,0 +1,56 @@
+[2025-06-14 08:42:31] Attempting to load config from: D:\GitHub\WeatherTopic\backend\models/../weatherConfig/weatherConfig.php
+[2025-06-14 08:42:31] Loaded config: array (
+  'apiKey' => '0595ec14502148a19de175541251306',
+  'apiUrl' => 'http://api.weatherapi.com/v1/current.json',
+)
+[2025-06-14 08:42:31] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:43:02] Attempting to load config from: D:\GitHub\WeatherTopic\backend\models/../weatherConfig/weatherConfig.php
+[2025-06-14 08:43:02] Loaded config: array (
+  'apiKey' => '0595ec14502148a19de175541251306',
+  'apiUrl' => 'http://api.weatherapi.com/v1/current.json',
+)
+[2025-06-14 08:43:02] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:43:20] Attempting to load config from: D:\GitHub\WeatherTopic\backend\models/../weatherConfig/weatherConfig.php
+[2025-06-14 08:43:20] Loaded config: array (
+  'apiKey' => '0595ec14502148a19de175541251306',
+  'apiUrl' => 'http://api.weatherapi.com/v1/current.json',
+)
+[2025-06-14 08:43:20] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:43:27] Attempting to load config from: D:\GitHub\WeatherTopic\backend\models/../weatherConfig/weatherConfig.php
+[2025-06-14 08:43:27] Loaded config: array (
+  'apiKey' => '0595ec14502148a19de175541251306',
+  'apiUrl' => 'http://api.weatherapi.com/v1/current.json',
+)
+[2025-06-14 08:43:27] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:43:29] Attempting to load config from: D:\GitHub\WeatherTopic\backend\models/../weatherConfig/weatherConfig.php
+[2025-06-14 08:43:29] Loaded config: array (
+  'apiKey' => '0595ec14502148a19de175541251306',
+  'apiUrl' => 'http://api.weatherapi.com/v1/current.json',
+)
+[2025-06-14 08:43:29] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:45:32] Attempting to load config from: D:\GitHub\WeatherTopic\backend\models/../weatherConfig/weatherConfig.php
+[2025-06-14 08:45:32] Loaded config: array (
+  'apiKey' => '0595ec14502148a19de175541251306',
+  'apiUrl' => 'http://api.weatherapi.com/v1/current.json',
+)
+[2025-06-14 08:45:32] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:46:08] Attempting to load config from: D:\GitHub\WeatherTopic\backend\models/../weatherConfig/weatherConfig.php
+[2025-06-14 08:46:08] Loaded config: array (
+  'apiKey' => '0595ec14502148a19de175541251306',
+  'apiUrl' => 'http://api.weatherapi.com/v1/current.json',
+)
+[2025-06-14 08:46:08] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:52:22] Attempting to load config from: D:\GitHub\WeatherTopic\backend\models/../weatherConfig/weatherConfig.php
+[2025-06-14 08:52:22] Loaded config: array (
+  'apiKey' => '0595ec14502148a19de175541251306',
+  'apiUrl' => 'http://api.weatherapi.com/v1/current.json',
+)
+[2025-06-14 08:52:22] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:52:42] Attempting to load config from: D:\GitHub\WeatherTopic\backend\models/../weatherConfig/weatherConfig.php
+[2025-06-14 08:52:42] Loaded config: array (
+  'apiKey' => '0595ec14502148a19de175541251306',
+  'apiUrl' => 'http://api.weatherapi.com/v1/current.json',
+)
+[2025-06-14 08:52:42] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:53:52] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'
+[2025-06-14 08:54:10] Extracted apiKey: '0595ec14502148a19de175541251306', apiUrl: 'http://api.weatherapi.com/v1/current.json'

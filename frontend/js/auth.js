@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if user is already logged in
     const token = localStorage.getItem('token');
     if (token) {
         window.location.href = 'weather.html';
     }
 
-    // Tab switching
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -13,11 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             const tabId = btn.dataset.tab;
             
-            // Update active button
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
-            // Show selected content
             tabContents.forEach(content => {
                 content.classList.add('hidden');
                 if (content.id === tabId) {
@@ -27,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Login form handling
     const loginForm = document.getElementById('loginForm');
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -48,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 localStorage.setItem('token', data.token);
+                console.log('Login token saved:', data.token);
                 window.location.href = 'weather.html';
             } else {
                 alert(data.message || 'Login failed');
@@ -57,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Register form handling
     const registerForm = document.getElementById('registerForm');
     registerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
